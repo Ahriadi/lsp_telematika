@@ -27,6 +27,12 @@ class M_produk extends CI_Model
 		return false;
 	}
 
+	public function get_produk($id_produk){
+		$this->db->where('id_produk', $id_produk);
+		$query = $this->db->get('table_produk');
+		return $query->result();
+	}
+
 
 
 	public function record_count(){

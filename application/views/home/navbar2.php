@@ -1,4 +1,3 @@
-
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
 
@@ -32,6 +31,19 @@
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 			  <ul class="nav navbar-nav">
 				<li class="active"><a href="<?php echo base_url();?>home#intro">Beranda</a></li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><!--span class="badge custom-badge red pull-right">Extra</span-->Paket <b class="caret"></b></a>
+				  <ul class="dropdown-menu">
+						<?php
+							if($menu){
+							foreach($menu as $v) { ?>
+							<li>
+								<a href="<?php echo base_url('home/menu?id_kategori='.$v->id_kategori.'&&nama_kategori='.$v->nama_kategori);?>" ><?php echo $v->nama_kategori ?></a>
+							</li>
+						<?php }
+							}?>
+				  </ul>
+				</li>
 				<li><a href="#makanan">Makanan</a></li>
 				<li><a href="#kontak">Kontak</a></li>
 
@@ -43,9 +55,9 @@
 						<li ><a href="<?php echo base_url();?>pembelian">Pembelian</a></li>
 				  </ul>
 				</li>
+				<?php } else {?>
+				<?php }?>
 				
-
-
 				  <li>
 					<?php if ($this->session->userdata('id_user')) {?>
 					  <a href="<?php echo base_url();?>"><?php echo $this->session->userdata('username')?></a>

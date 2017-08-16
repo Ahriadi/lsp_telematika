@@ -65,12 +65,11 @@ class Home extends CI_Controller {
     }
 
 	public function menu(){
-		$data['kategori'] = $this->M_kategori->get_produk($this->input->get('id_kategori'));
-		$data['menu'] = $this->M_kategori->tampil();
-		$data['teman'] = $this->M_chat->get_admin();
+    $data['produk'] = $this->M_produk->get_produk($this->input->get('id_produk'));
+    
 		$this->load->view('home/header');
 		$this->load->view('home/navbar2', $data);
-		$this->load->view('home/menu', $data);
+		$this->load->view('home/menu');
 		$this->load->view('home/footer');
 	}
 
