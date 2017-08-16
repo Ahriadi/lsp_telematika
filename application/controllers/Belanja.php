@@ -62,9 +62,7 @@ class Belanja extends CI_Controller{
         if(!isset($data['entry'][0]) || $data['entry'][0] == ""){
             redirect(base_url('produk')."");
         }else{
-            $data['entry'] = $data['entry'][0];
-			$data['menu'] = $this->M_kategori->tampil();
-			$data['teman'] = $this->M_chat->get_admin();
+        $data['entry'] = $data['entry'][0];
 			$this->load->view('home/header');
 			$this->load->view('home/navbar2', $data);
 			$this->load->view('home/belanja_edit', $data);
