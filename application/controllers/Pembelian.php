@@ -123,7 +123,7 @@ class Pembelian extends CI_Controller{
 		$id_user = $this->input->post('id_user');
 		$jumlah = count($this->input->post('id_pesanan'));
 		$id_pesanan = $this->input->post('id_pesanan');
-		$status = '2';
+		// $status = '2';
 
 		for($i=0;$i<$jumlah;$i++) {
 			$data['id_user'] = $id_user;

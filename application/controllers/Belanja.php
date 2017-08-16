@@ -52,8 +52,7 @@ class Belanja extends CI_Controller{
 		$this->M_pesanan->tambah($data);
 
 		$this->session->set_flashdata('notif','Data Pesanan Disimpan, Silahkan Cek di keranjang Belanja Anda!');
-		redirect('home/menu');
-
+		redirect('home');
     }
 
 	public function tampil_edit_keranjang_belanja(){
