@@ -5,7 +5,9 @@ class Transaksi_selesai extends CI_Controller{
     function __construct() {
         parent::__construct();
         // error_reporting(0);
+        // $this->load->model('M_kategori');
         $this->load->model('m_transaksi_selesai');
+        // $this->load->model('m_chat');
 
   		// if(!$this->session->userdata('id_admin')){
   		// 	redirect('login');
