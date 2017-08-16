@@ -58,11 +58,8 @@ class Home extends CI_Controller {
 
 		$data['produk'] = $this->M_produk->data($config['per_page'],$page);
 		$data['links'] = $this->pagination->create_links();
-		$data['kategori'] = $this->M_kategori->get_produk($this->input->get('id_kategori'));
-		$data['menu'] = $this->M_kategori->tampil();
-		$data['teman'] = $this->M_chat->get_admin();
 		$this->load->view('home/header');
-		$this->load->view('home/navbar', $data);
+		$this->load->view('home/navbar');
 		$this->load->view('home/content', $data);
 		$this->load->view('home/footer');
     }
@@ -78,22 +75,16 @@ class Home extends CI_Controller {
 	}
 
 	public function login() {
-		$data['kategori'] = $this->M_kategori->get_produk($this->input->get('id_kategori'));
-		$data['menu'] = $this->M_kategori->tampil();
-		$data['teman'] = $this->M_chat->get_admin();
 		$this->load->view('home/header');
-		$this->load->view('home/navbar2', $data);
-		$this->load->view('home/login', $data);
+		$this->load->view('home/navbar2');
+		$this->load->view('home/login');
 		$this->load->view('home/footer');
     }
 
 		public function daftar() {
-		$data['kategori'] = $this->M_kategori->get_produk($this->input->get('id_kategori'));
-		$data['menu'] = $this->M_kategori->tampil();
-		$data['teman'] = $this->M_chat->get_admin();
 		$this->load->view('home/header');
-		$this->load->view('home/navbar2', $data);
-		$this->load->view('home/daftar',$data);
+		$this->load->view('home/navbar2');
+		$this->load->view('home/daftar');
 		$this->load->view('home/footer');
     }
 

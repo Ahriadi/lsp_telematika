@@ -63,19 +63,14 @@ class M_produk extends CI_Model
 
 	public function data($limit,$start)
 	{
-		// $this->db->select('*');
-		// $this->db->from('table_produk r');
-		// $this->db->join('table_kategori k', 'r.id_kategori=k.id_kategori');
-    //
-		// $this->db->limit($limit,$start);
-		// $query = $this->db->get();
-		// if($query->num_rows() > 0){
-		// 	foreach ($query->result () as $row) {
-		// 		$data[] = $row;
-		// 	}
-		// 	return $data;
-		// }
-		// return false;
+		$query = $this->db->get('table_produk');
+		if($query->num_rows() > 0){
+			foreach ($query->result () as $row) {
+				$data[] = $row;
+			}
+			return $data;
+		}
+		return false;
 	}
 
 

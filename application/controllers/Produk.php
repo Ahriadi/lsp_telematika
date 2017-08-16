@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class produk extends CI_Controller{
     function __construct() {
         parent::__construct();
-        // error_reporting(0);
+        error_reporting(0);
         $this->load->model('M_produk');
         // $this->load->model('m_chat');
 		// if(!$this->session->userdata('id_admin')){
@@ -167,7 +167,6 @@ class produk extends CI_Controller{
         if($_FILES['userfile']['name']==""){
           $data['id_produk'] = $this->input->post('id_produk');
           $data['nama_produk'] = $this->input->post('nama_produk');
-          $data['id_kategori'] = $this->input->post('id_kategori');
           $data['harga'] = $this->input->post('harga');
 
           $this->M_produk->update($data);
@@ -192,7 +191,6 @@ class produk extends CI_Controller{
             $dat = $this->upload->data();
             $data['id_produk'] = $this->input->post('id_produk');
             $data['nama_produk'] = $this->input->post('nama_produk');
-            $data['id_kategori'] = $this->input->post('id_kategori');
             $data['harga'] = $this->input->post('harga');
             $data['gambar'] = $dat['file_name'];
 
