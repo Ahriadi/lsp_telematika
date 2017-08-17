@@ -89,13 +89,12 @@ class Home extends CI_Controller {
 
 		public function proses_daftar(){
         $data['id_user'] = $this->input->post('id_user');
-        $data['username'] = $this->input->post('username');
+				$data['nama_lengkap'] = $this->input->post('nama_lengkap');
+				$data['alamat'] = $this->input->post('alamat');
+				$data['email'] = $this->input->post('email');
+				$data['no_telepon'] = $this->input->post('no_telepon');
+				$data['username'] = $this->input->post('username');
         $data['password'] = md5($this->input->post('password'));
-        $data['email'] = $this->input->post('email');
-        $data['alamat'] = $this->input->post('alamat');
-        $data['no_telepon'] = $this->input->post('no_telepon');
-        $data['type'] = 2;
-
 
         $this->M_user->tambah($data);
         redirect(base_url('home/login')."");

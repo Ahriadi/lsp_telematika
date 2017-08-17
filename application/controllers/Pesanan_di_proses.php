@@ -7,9 +7,9 @@ class Pesanan_di_proses extends CI_Controller{
         // error_reporting(0);
         $this->load->model('m_pesanan_di_proses');
 
-  		// if(!$this->session->userdata('id_admin')){
-  		// 	redirect('login');
-  		// }
+  		if(!$this->session->userdata('id_admin')){
+  			redirect('login');
+  		}
     }
 
    function index(){

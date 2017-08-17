@@ -1,16 +1,10 @@
 <!-- page content -->
 <div class="right_col" role="main">
-    <h2>Selamat Datang Admin</h2>
+    <h2>Data Pesanan Masuk</h2>
 
     <!-- sidebar -->
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-          <h1>
-            Pesanan Masuk
-          </h1>
-        </section>
 
         <!-- Main content -->
         <section class="content">
@@ -19,7 +13,6 @@
 
     	  <!-- Default box -->
     	 <div class="box-header with-border">
-    			<h3 class="box-title">Data Pesanan Masuk</h3>
     			<div class="pull-right">
     				<p id="tanggal"><?php echo date("d M Y"); ?></p>
     			</div>

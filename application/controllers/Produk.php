@@ -7,9 +7,9 @@ class produk extends CI_Controller{
         error_reporting(0);
         $this->load->model('M_produk');
         // $this->load->model('m_chat');
-		// if(!$this->session->userdata('id_admin')){
-		// 	redirect('login');
-		// }
+		if(!$this->session->userdata('id_admin')){
+			redirect('login');
+		}
     }
 
 

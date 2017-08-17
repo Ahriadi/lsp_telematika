@@ -7,9 +7,9 @@ class Pesanan_masuk extends CI_Controller{
         // error_reporting(0);
         $this->load->model('M_pesanan_masuk');
 
-  		// if(!$this->session->userdata('id_admin')){
-  		// 	redirect('login');
-  		// }
+  		if(!$this->session->userdata('id_admin')){
+  			redirect('login');
+  		}
     }
 
    function index(){

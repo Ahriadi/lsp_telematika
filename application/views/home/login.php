@@ -5,7 +5,7 @@
 				<div class="row">
 					<div class="col-lg-6">
 					<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-					<h2 class="h-ultra">Selamat Datang di Rumah Makan Angkasa Nikmat!</h2>
+					<br><br><h2 style="font-size: 27px;" class="h-ultra">Selamat Datang di Rumah Makan Podoteko!</h2>
 					</div>
 					<div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
 					<h4 class="h-light">Kebutuhan anda adalah prioritas kami.</h4>

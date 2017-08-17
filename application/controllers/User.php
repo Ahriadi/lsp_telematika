@@ -7,9 +7,9 @@ class User extends CI_Controller{
         // error_reporting(0);
         $this->load->model('M_user');
 
-		// if(!$this->session->userdata('id_admin')){
-		// 	redirect('login');
-		//   }
+		if(!$this->session->userdata('id_admin')){
+			redirect('login');
+		  }
     }
 
 

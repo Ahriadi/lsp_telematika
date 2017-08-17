@@ -5,12 +5,12 @@ class Login extends CI_Controller{
         parent::__construct();
 
 	       $this->load->model('m_login');
-         error_reporting(0);
+        //  error_reporting(0);
     }
 
     function index(){
   		if($this->session->userdata('id_admin')){
-  			redirect('admin');
+  			redirect('Admin');
   		}else {
   			$this->load->view('Login/login');
   		}
@@ -34,7 +34,7 @@ class Login extends CI_Controller{
             // Daftarkan Session
             $sess = array(
                 'logged' => TRUE,
-                 'id_admin' => $result->id_user,
+                 'id_admin' => $result->id_admin,
                 'username' => $result->username,
             );
             $this->session->set_userdata($sess);

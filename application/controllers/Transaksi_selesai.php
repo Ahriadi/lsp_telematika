@@ -9,9 +9,9 @@ class Transaksi_selesai extends CI_Controller{
         $this->load->model('m_transaksi_selesai');
         // $this->load->model('m_chat');
 
-  		// if(!$this->session->userdata('id_admin')){
-  		// 	redirect('login');
-  		// }
+  		if(!$this->session->userdata('id_admin')){
+  			redirect('login');
+  		}
     }
 
    function index(){

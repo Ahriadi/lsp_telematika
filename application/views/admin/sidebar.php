@@ -7,7 +7,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>R.M Podoteko</span></a>
+              <a href="<?php echo site_url('admin'); ?>" class="site_title"><i class="fa fa-paw"></i> <span>R.M Podoteko</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -43,7 +43,7 @@
                       <li><a href="<?php echo site_url('transaksi_selesai'); ?>">Transaksi Selesai</a></li>
                       </ul>
                   </li>
-                  <!-- <li><a href="<?php echo site_url('laporan'); ?>"><i class="fa fa-print"></i>Laporan <span ></span></a></li> -->
+                  <li><a href="<?php echo site_url('laporan'); ?>"><i class="fa fa-print"></i>Laporan <span ></span></a></li>
 
                 </ul>
               </div>
@@ -72,11 +72,11 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?php echo base_url();?>assets/images/img.jpg" alt="">John Doe
+                    <img src="<?php echo base_url();?>assets/images/img.jpg" alt="">Ahriadi
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                  <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  <li><a href="<?php echo base_url();?>login/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
               </ul>
